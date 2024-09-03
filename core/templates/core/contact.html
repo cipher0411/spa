@@ -1,0 +1,83 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="contact-page section bg-light py-5 mt-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-lg-6 mb-4">
+                <div class="section-heading mb-4">
+                    <h6 class="text-dark">| Contact Us</h6>
+                    <h2 class="text-custom">Experience Tranquility and Relaxation</h2>
+                </div>
+                <p class="text-secondary mb-4">
+                    For urgent service or to book a last-minute appointment, please contact us directly. Our team is ready to assist you with any special requests or immediate needs you may have. Don't hesitate to reach out—we're here to ensure you get the best care possible.
+                </p>
+                <div class="contact-info mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="{% static 'img/call.png' %}" alt="Phone Icon" class="me-3" style="max-width: 52px;">
+                        <div>
+                            <h6 class="text-dark mb-0">010-020-0340</h6>
+                            <span class="text-muted">Phone Number</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img src="{% static 'img/mail.png' %}" alt="Email Icon" class="me-3" style="max-width: 52px;">
+                        <div>
+                            <h6 class="text-dark mb-0">info@villa.co</h6>
+                            <span class="text-muted">Business Email</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6 mb-4">
+                <form id="contact-form" action="" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <fieldset>
+                                <label for="name" class="form-label text-dark">Full Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name..." autocomplete="on" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <fieldset>
+                                <label for="email" class="form-label text-dark">Email Address</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Your E-mail..." required>
+                            </fieldset>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <fieldset>
+                                <label for="phone" class="form-label text-dark">Phone Number</label>
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone Number..." autocomplete="on">
+                            </fieldset>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <fieldset>
+                                <label for="subject" class="form-label text-dark">Subject</label>
+                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject..." autocomplete="on">
+                            </fieldset>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <fieldset>
+                                <label for="message" class="form-label text-dark">Message</label>
+                                <textarea name="message" id="message" class="form-control" placeholder="Your Message" rows="4"></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="col-12">
+                            <fieldset>
+                                <button type="submit" id="form-submit" class="btn btn-success rounded-pill">Send Message</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

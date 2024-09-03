@@ -1,0 +1,447 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Carousel Start -->
+ <div class="container-fluid mb-3">
+<div class="header-carousel">
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="{% static 'img/carousel-2.jpg' %}" class="img-fluid w-100" alt="First slide"/>
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <h1 class="display-4 font-weight-bold">Discover the Art of Relaxation at Mide Spa</h1>
+                        <p class="lead">Immerse yourself in a world of tranquility and rejuvenation. Our expert therapists and serene environment promise an unforgettable spa experience tailored just for you.</p>
+                        <a href="{% url 'appointment' %}" class="btn btn-light btn-lg mt-4">Book Your Spa Treatment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="{% static 'img/carousel-1.jpg' %}" class="img-fluid w-100" alt="Second slide"/>
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-center text-white">
+                        <h1 class="display-4 font-weight-bold">Indulge in Luxury at Mide Spa</h1>
+                        <p class="lead">From soothing massages to revitalizing facials, every treatment at Mide Spa is designed to provide you with the ultimate in relaxation and pampering. Treat yourself today.</p>
+                        <a href="{% url 'appointment' %}" class="btn btn-light btn-lg mt-4">Book Your Spa Treatment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselId" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselId" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+</div>
+
+
+
+<section class="ftco-section">
+    <div class="container-fluid px-md-5 mt-4 mb-4">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-12 heading-section ftco-animate text-center">
+                <h2 class="mb-1" style="color: #808000;">Treatments</h2>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <!-- Treatment Options -->
+            <div class="col-lg-4">
+                <div class="row no-gutters">
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border border-right-0 border-bottom-0 p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-hot-tub fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Salt &amp; Aroma</h3>
+                                <p>This treatment uses a blend of aromatic oils and sea salts to exfoliate and rejuvenate the skin, leaving it soft and glowing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border border-bottom-0 p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-spa fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Hydro</h3>
+                                <p>This hydrotherapy treatment involves the use of water to relieve pain, improve circulation, and promote relaxation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border border-right-0 p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-gem fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Hot Stone</h3>
+                                <p>Hot stones are placed on specific points of the body to relieve tension, enhance circulation, and promote deep relaxation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-leaf fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Aroma</h3>
+                                <p>This aromatherapy massage uses essential oils to improve both physical and emotional well-being, reducing stress and anxiety.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prices Section -->
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div id="accordion" class="myaccordion w-100 text-center py-5 px-1 px-md-4">
+                    <div>
+                        <h3 style="color: #808000;">Prices</h3>
+                        <p>Discover our wide range of services available at competitive prices.</p>
+                    </div>
+                    <img src="{% static 'img/carousel-2.jpg' %}" class="img-fluid w-100" alt="First slide" style="margin-bottom: 20px;"/>
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    Spa Therapies
+                                </div>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body text-left">
+                                <ul>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Face Treatments</span>
+                                        <span style="color: red;">40 min.</span>
+                                        <span style="color: blue;">£10</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Nail Treatments</span>
+                                        <span style="color: red;">30 min.</span>
+                                        <span style="color: blue;">£20</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Medical Treatments</span>
+                                        <span style="color: red;">60 min.</span>
+                                        <span style="color: blue;">£10</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Hair Treatments</span>
+                                        <span style="color: red;">30 min.</span>
+                                        <span style="color: blue;">£30</span>
+                                    </li>
+                                </ul>
+                                <ul id="morePrices" style="display: none;">
+                                    <li class="d-flex justify-content-between">
+                                        <span>Body Scrub</span>
+                                        <span style="color: red;">45 min.</span>
+                                        <span style="color: blue;">£35</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Deep Tissue Massage</span>
+                                        <span style="color: red;">60 min.</span>
+                                        <span style="color: blue;">£50</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Relaxation Massage</span>
+                                        <span style="color: red;">90 min.</span>
+                                        <span style="color: blue;">£70</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between">
+                                        <span>Aromatherapy Massage</span>
+                                        <span style="color: red;">60 min.</span>
+                                        <span style="color: blue;">£55</span>
+                                    </li>
+                                </ul>
+                                <a id="togglePrices" href="#" class="btn btn-link p-0" style="color: #ffffff; background-color: #808000;">Read more</a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Treatment Options -->
+            <div class="col-lg-4">
+                <div class="row no-gutters">
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border border-right-0 border-bottom-0 p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-spa fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Relaxation</h3>
+                                <p>This treatment focuses on relaxing the body and mind, using soothing techniques to reduce stress and promote a sense of calm.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border border-bottom-0 p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-running fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Athlete</h3>
+                                <p>Designed for athletes, this treatment helps in muscle recovery, reducing soreness, and improving overall athletic performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border border-right-0 p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-hands fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Thai</h3>
+                                <p>Traditional Thai massage involves stretching and deep pressure techniques to relieve tension and improve flexibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="treatment w-100 text-center ftco-animate border p-3 py-4">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <i class="fas fa-seedling fa-3x" style="color: #808000;"></i>
+                            </div>
+                            <div class="text mt-2">
+                                <h3>Rose</h3>
+                                <p>This luxurious treatment uses rose oil to nourish the skin, leaving it soft, hydrated, and delicately scented.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Our Work Start -->
+<div class="container-fluid our-work py-5">
+    <div class="container-fluid py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-dark">Our Work</h4>
+            <h1 class="text-custom display-5 mb-4">Relax and Rejuvenate at Our Spa</h1>
+            <p class="mb-0">
+                At our spa, we pride ourselves on delivering an exceptional experience that leaves you feeling rejuvenated and refreshed. Explore the beauty, care, and attention to detail that define the quality of service you can expect when you choose us.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="work-item">
+                    <img src="{% static 'img/gallery-1.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Spa Image 1">
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="work-item">
+                    <img src="{% static 'img/gallery-2.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Spa Image 2">
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="work-item">
+                    <img src="{% static 'img/gallery-3.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Spa Image 3">
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="work-item">
+                    <img src="{% static 'img/gallery-4.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Spa Image 4">
+                </div>
+            </div>
+            <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="work-item">
+                    <img src="{% static 'img/gallery-5.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Spa Image 5">
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="work-item">
+                    <img src="{% static 'img/gallery-6.jpg' %}" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Spa Image 6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Work End -->
+
+
+<!-- gallery top -->
+<div class="gallery-top py-md-4 bg-light">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h4 class="footer-top-text text-capitalize text-cutsom">Discover the Ultimate Spa Experience</h4>
+                <p class="mt-2">We promise to deliver the finest treatments that rejuvenate your body and soul. Explore our gallery to see the exceptional care we provide, and book your spa treatment today!</p>
+            </div>
+            <div class="col-lg-4 text-center mt-lg-0 mt-4">
+                <a href="{% url 'appointment' %}" class="text-capitalize serv_link btn btn-primary">Book Your Spa Treatment</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- //gallery top -->
+  
+
+
+<script>
+    document.getElementById('togglePrices').addEventListener('click', function() {
+        var morePrices = document.getElementById('morePrices');
+        if (morePrices.style.display === 'none') {
+            morePrices.style.display = 'block';
+            this.textContent = 'Read less';
+        } else {
+            morePrices.style.display = 'none';
+            this.textContent = 'Read more';
+        }
+    });
+</script>
+
+<style>
+/*** Carousel Header Start ***/
+.carousel .carousel-item img {
+    object-fit: cover;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item img {
+    height: 700px;
+}
+
+.carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text horizontally */
+    background: rgba(0, 0, 0, 0.137); 
+}
+
+.carousel .carousel-indicators {
+    left: 75%;
+    top: 50%;
+    margin-right: 25%;
+    transform: translateY(-50%);
+    flex-direction: column;
+}
+
+.carousel-indicators [data-bs-target] {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border: 6px solid var(--bs-white);
+    border-radius: 15px;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--bs-secondary);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: var(--bs-primary);
+}
+
+@media (max-width: 992px) {
+    .carousel-indicators [data-bs-target] {
+        display: none;
+    }
+}
+
+.carousel-caption .text-center {
+    max-width: 600px; /* Adjust max-width as needed */
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 767.98px) {
+    .carousel-caption .text-center {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/*** Carousel Header End ***/
+
+
+
+.intro-section {
+        background-image: url('{% static "images/intro.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    
+    /*** Our Work Start ***/
+.our-work .work-item {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.our-work .work-item img {
+    transition: 0.5s;
+}
+
+.our-work .work-item:hover img {
+    transform: scale(1.2);
+}
+
+.our-work .work-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .4);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.our-work .work-item:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.our-work .work-item .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    z-index: 5;
+    opacity: 0;
+}
+
+.our-work .work-item:hover .search-icon {
+    opacity: 1;
+}
+/*** Our Work End ***/
+
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}

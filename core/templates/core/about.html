@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+   <!-- About Us Start -->
+<div id="about" style="padding-top: 5rem; padding-bottom: 5rem; background-color: #f8f9fa;">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <!-- Single Large Image Section -->
+                <div class="text-center">
+                    <img class="img-fluid rounded wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/about-1.jpg' %}" alt="Mide Spa" style="max-width: 100%; height: auto; transition: transform 0.3s ease, opacity 0.3s ease;">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="section-title ff-secondary text-start fw-normal" style="color: #808000;">About Us</h5>
+                <h1 class="mb-4">Welcome to <i class="fa fa-leaf me-2" style="color: #808000;"></i>Mide Spa</h1>
+                <p class="mb-4">Mide Spa is a sanctuary of tranquility, where wellness meets luxury. We are dedicated to providing a serene environment that nurtures the body, mind, and spirit through a variety of rejuvenating treatments.</p>
+                <p class="mb-4">At Mide Spa, we combine traditional and modern techniques to deliver an unparalleled spa experience. From our signature massages to our revitalizing facials, every treatment is designed to enhance your well-being and leave you feeling renewed. Our highly trained therapists are committed to ensuring that every visit to Mide Spa is a transformative journey towards relaxation and renewal.</p>
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center" style="border-left: 5px solid #808000; padding-left: 15px;">
+                            <h1 class="flex-shrink-0 display-5 mb-0" style="color: #808000;" data-toggle="counter-up">15</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Years of</p>
+                                <h6 class="text-uppercase mb-0">Excellence</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center" style="border-left: 5px solid #808000; padding-left: 15px;">
+                            <h1 class="flex-shrink-0 display-5 mb-0" style="color: #808000;" data-toggle="counter-up">1,000+</h1>
+                            <div class="ps-4">
+                                <p class="mb-0">Satisfied</p>
+                                <h6 class="text-uppercase mb-0">Clients</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn py-3 px-5 mt-2" href="{% url 'services' %}" style="background-color: #808000; color: white; border: none; transition: background-color 0.3s ease;">Explore Our Services</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- About Us End -->
+  
+</div>
+{% endblock %}

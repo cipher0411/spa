@@ -1,0 +1,191 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <!-- gallery top -->
+    <div class="gallery-top py-md-4 mt-2 bg-light">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h4 class="footer-top-text text-capitalize text-custom">Explore Our Spa Plans</h4>
+                    <p class="mt-2">Discover our exclusive monthly spa plans designed to rejuvenate and refresh. From our Basic Plan at £49 to the Ultimate Plan at £299, we have options to suit every need. Check out our plans and choose the best one for you</p>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-4 text-center">
+                    <a href="{% url 'appointment' %}" class="text-capitalize serv_link btn btn-primary">Book Your Spa Treatment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //gallery top -->
+
+    <!-- Pricing Start -->
+    <div class="container-fluid pricing py-4">
+        <div class="container py-4">
+            <!-- Bootstrap Carousel Start -->
+            <div id="pricingCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="rounded pricing-content">
+                                    <div class="d-flex align-items-center justify-content-between bg-light rounded-top border-3 border-bottom p-4">
+                                        <h1 class="display-4 mb-0">
+                                            <small class="align-top text-muted" style="font-size: 22px; line-height: 45px;">£</small>49<small class="text-muted" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                                        </h1>
+                                        <h5 class="text-custom text-uppercase m-0">Basic Plan</h5>
+                                    </div>
+                                    <div class="p-4">
+                                        <p><i class="fa fa-check text-custom me-2"></i>Full Body Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Deep Tissue Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Hot Stone Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Tissue Body Polish</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Foot & Nail Care</p>
+                                        <a href="" class="btn btn-primary btn-primary-outline-0 rounded-pill my-2 px-4">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rounded pricing-content">
+                                    <div class="d-flex align-items-center justify-content-between bg-light rounded-top border-3 border-bottom p-4">
+                                        <h1 class="display-4 mb-0">
+                                            <small class="align-top text-muted" style="font-size: 22px; line-height: 45px;">£</small>99<small class="text-muted" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                                        </h1>
+                                        <h5 class="text-custom text-uppercase m-0">Family Plan</h5>
+                                    </div>
+                                    <div class="p-4">
+                                        <p><i class="fa fa-check text-custom me-2"></i>Full Body Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Deep Tissue Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Hot Stone Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Tissue Body Polish</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Foot & Nail Care</p>
+                                        <a href="" class="btn btn-primary btn-primary-outline-0 rounded-pill my-2 px-4">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rounded pricing-content">
+                                    <div class="d-flex align-items-center justify-content-between bg-light rounded-top border-3 border-bottom p-4">
+                                        <h1 class="display-4 mb-0">
+                                            <small class="align-top text-muted" style="font-size: 22px; line-height: 45px;">£</small>149<small class="text-muted" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                                        </h1>
+                                        <h5 class="text-custom text-uppercase m-0">VIP Plan</h5>
+                                    </div>
+                                    <div class="p-4">
+                                        <p><i class="fa fa-check text-custom me-2"></i>Full Body Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Deep Tissue Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Hot Stone Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Tissue Body Polish</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Foot & Nail Care</p>
+                                        <a href="" class="btn btn-primary btn-primary-outline-0 rounded-pill my-2 px-4">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="rounded pricing-content">
+                                    <div class="d-flex align-items-center justify-content-between bg-light rounded-top border-3 border-bottom p-4">
+                                        <h1 class="display-4 mb-0">
+                                            <small class="align-top text-muted" style="font-size: 22px; line-height: 45px;">£</small>199<small class="text-muted" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                                        </h1>
+                                        <h5 class="text-custom text-uppercase m-0">Premium Plan</h5>
+                                    </div>
+                                    <div class="p-4">
+                                        <p><i class="fa fa-check text-custom me-2"></i>Full Body Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Deep Tissue Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Hot Stone Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Tissue Body Polish</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Foot & Nail Care</p>
+                                        <a href="" class="btn btn-primary btn-primary-outline-0 rounded-pill my-2 px-4">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rounded pricing-content">
+                                    <div class="d-flex align-items-center justify-content-between bg-light rounded-top border-3 border-bottom p-4">
+                                        <h1 class="display-4 mb-0">
+                                            <small class="align-top text-muted" style="font-size: 22px; line-height: 45px;">£</small>249<small class="text-muted" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                                        </h1>
+                                        <h5 class="text-custom text-uppercase m-0">Exclusive Plan</h5>
+                                    </div>
+                                    <div class="p-4">
+                                        <p><i class="fa fa-check text-custom me-2"></i>Full Body Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Deep Tissue Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Hot Stone Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Tissue Body Polish</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Foot & Nail Care</p>
+                                        <a href="" class="btn btn-primary btn-primary-outline-0 rounded-pill my-2 px-4">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rounded pricing-content">
+                                    <div class="d-flex align-items-center justify-content-between bg-light rounded-top border-3 border-bottom p-4">
+                                        <h1 class="display-4 mb-0">
+                                            <small class="align-top text-muted" style="font-size: 22px; line-height: 45px;">£</small>299<small class="text-muted" style="font-size: 16px; line-height: 40px;">/Mo</small>
+                                        </h1>
+                                        <h5 class="text-custom text-uppercase m-0">Ultimate Plan</h5>
+                                    </div>
+                                    <div class="p-4">
+                                        <p><i class="fa fa-check text-custom me-2"></i>Full Body Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Deep Tissue Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Hot Stone Massage</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Tissue Body Polish</p>
+                                        <p><i class="fa fa-check text-custom me-2"></i>Foot & Nail Care</p>
+                                        <a href="" class="btn btn-primary btn-primary-outline-0 rounded-pill my-2 px-4">Order Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#pricingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pricingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- Bootstrap Carousel End -->
+        </div>
+    </div>
+    <!-- Pricing End -->
+</div>
+
+<style>
+    /* Custom Styles for Pricing Carousel */
+    .pricing-content {
+        background: white; /* Optional: change to another color if needed */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-inner {
+        padding: 15px; /* Optional: add padding to the inner carousel */
+    }
+
+    .carousel-item {
+        padding: 15px; /* Optional: add padding between carousel items */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #808000; /* Change to match your theme */
+    }
+
+    .text-custom {
+        color: #808000;
+    }
+
+    .border-primary {
+        border-color: #808000 !important;
+    }
+</style>
+
+{% endblock %}

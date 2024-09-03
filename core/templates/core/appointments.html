@@ -1,0 +1,230 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Carousel Start -->
+<div class="header-carousel">
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <!-- First Carousel Item (keep this one) -->
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="{% static 'img/carousel-2.jpg' %}" class="img-fluid w-100" alt="First slide"/>
+                <div class="carousel-caption">
+                    <div class="container py-4">
+                        <div class="row g-5">
+                            <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                                <div class="bg-secondary rounded p-5 transparent-bg">
+                                    <h4 class="text-white mb-4">Book Your Spa Appointment</h4>
+                                    <form method="post" class="needs-validation" novalidate>
+                                        {% csrf_token %}
+                                        <div class="row g-3">
+                                            <!-- Name -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-user"></span><span class="ms-1">Full Name</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="name" name="name" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <!-- Email -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-envelope"></span><span class="ms-1">Email</span>
+                                                    </div>
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <!-- Phone Number -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-phone"></span><span class="ms-1">Phone Number</span>
+                                                    </div>
+                                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="" required>
+                                                </div>
+                                            </div>
+                                            <!-- Preferred Date -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-calendar-alt"></span><span class="ms-1">Preferred Date</span>
+                                                    </div>
+                                                    <input type="date" class="form-control" id="date" name="date" required>
+                                                </div>
+                                            </div>
+                                            <!-- Preferred Time -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-clock"></span><span class="ms-1">Preferred Time</span>
+                                                    </div>
+                                                    <input type="time" class="form-control" id="time" name="time" required>
+                                                </div>
+                                            </div>
+                                            <!-- Service -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-spa"></span><span class="ms-1">Service</span>
+                                                    </div>
+                                                    <select class="form-select" id="service" name="service" required>
+                                                        <option value="" disabled selected>Select a service</option>
+                                                        <option value="massage">Massage</option>
+                                                        <option value="facial">Facial</option>
+                                                        <option value="manicure">Manicure</option>
+                                                        <option value="pedicure">Pedicure</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Address -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-map-marker-alt"></span><span class="ms-1">Address</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="address" name="address" placeholder="Your address (optional for office visit)">
+                                                </div>
+                                            </div>
+                                            <!-- Service Type -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                                                        <span class="fas fa-handshake"></span><span class="ms-1">Service Type</span>
+                                                    </div>
+                                                    <select class="form-select" id="service_type" name="service_type" required>
+                                                        <option value="office">Office Visit</option>
+                                                        <option value="home">Home Service</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Additional Notes -->
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Any additional notes or requests"></textarea>
+                                                </div>
+                                            </div>
+                                            <!-- Submit Button -->
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-light w-100 py-2">Book Your Spa Treatment</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                                <div class="text-start mt-5">
+                                    <h1 class="display-5 text-white">Experience Tranquility and Relaxation</h1>
+                                    <p>For urgent service or to book a last-minute appointment, please contact us directly.
+                                        Our team is ready to assist you with any special requests or immediate needs you may have.
+                                        Don't hesitate to reach out—we're here to ensure you get the best care possible.</p>
+                                    <!-- Contact Us Button -->
+                                    <div class="container my-5 text-center">
+                                        <a href="tel:+01234567890" class="btn btn-lg">Call Us Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of First Carousel Item -->
+        </div>
+        <!-- Remove the indicators and controls if only one slide is present -->
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- JavaScript for form validation -->
+<script>
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+<style>
+/* Transparent background with 50% opacity */
+.transparent-bg {
+    background-color: rgba(108, 117, 125, 0.5) !important; /* Bootstrap's secondary color with 50% opacity */
+}
+
+/* Transparent border for valid fields */
+input:valid,
+select:valid,
+textarea:valid {
+    border-color: #28a745; /* Bootstrap's green color for valid input */
+    background-color: #d4edda; /* Light green background for valid input */
+}
+
+/* General form control styles */
+.form-control,
+.form-select {
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Move text downward */
+.carousel-caption .text-start {
+    margin-top: 100px; /* Adjust this value as needed */
+}
+
+/* Ensure form takes full width on mobile */
+@media (max-width: 767.98px) {
+    .carousel-caption .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .carousel-caption .bg-secondary {
+        padding: 2rem; /* Adjust as needed */
+    }
+}
+
+/*** Carousel Header Start ***/
+.carousel .carousel-item img {
+    object-fit: cover;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item img {
+    height: 700px;
+}
+
+.carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering content horizontally */
+    text-align: center; /* Centering text horizontally */
+}
+
+/*** Carousel Header End ***/
+
+/* Responsive styling for form on mobile */
+@media (max-width: 767.98px) {
+    .carousel-caption .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .carousel-caption .bg-secondary {
+        padding: 2rem; /* Adjust as needed */
+    }
+}
+</style>
+
+{% endblock %}

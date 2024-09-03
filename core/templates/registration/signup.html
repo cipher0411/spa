@@ -1,0 +1,77 @@
+{% extends 'core/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<!-- Centered Container with background and header -->
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="bg-light rounded p-4 shadow-sm" style="max-width: 500px; width: 100%;">
+        <h4 class="text-dark mb-4 text-center">Sign Up</h4>
+        <!-- Display form errors -->
+        {% if messages %}
+            <div class="alert alert-danger">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <!-- Form Start -->
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+                <!-- Full Name -->
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                            <span class="fas fa-user"></span><span class="ms-1">Full Name</span>
+                        </div>
+                        {{ form.username|add_class:"form-control" }}
+                        {% if form.username.errors %}
+                            <div class="text-danger">{{ form.username.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                            <span class="fas fa-envelope"></span><span class="ms-1">Email</span>
+                        </div>
+                        {{ form.email|add_class:"form-control" }}
+                        {% if form.email.errors %}
+                            <div class="text-danger">{{ form.email.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                            <span class="fas fa-lock"></span><span class="ms-1">Password</span>
+                        </div>
+                        {{ form.password1|add_class:"form-control" }}
+                        {% if form.password1.errors %}
+                            <div class="text-danger">{{ form.password1.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Confirm Password -->
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="d-flex align-items-center bg-light text-body rounded-start p-2">
+                            <span class="fas fa-lock"></span><span class="ms-1">Confirm Password</span>
+                        </div>
+                        {{ form.password2|add_class:"form-control" }}
+                        {% if form.password2.errors %}
+                            <div class="text-danger">{{ form.password2.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- Submit Button -->
+                <div class="col-12">
+                    <button type="submit" class="btn btn-light w-100 py-2">Sign Up</button>
+                </div>
+            </div>
+        </form>
+        <!-- Form End -->
+    </div>
+</div>
+{% endblock %}

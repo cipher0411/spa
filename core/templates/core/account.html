@@ -1,0 +1,71 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Your Account{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Welcome, {{ user.username }}!</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <h4 class="card-title">Account Details</h4>
+                        <p><strong>Email:</strong> {{ user.email }}</p>
+                        <p><strong>First Name:</strong> {{ user.first_name|default:"N/A" }}</p>
+                        <p><strong>Last Name:</strong> {{ user.last_name|default:"N/A" }}</p>
+                        <p><strong>Last Login:</strong> {{ user.last_login|date:"F j, Y, g:i a"|default:"N/A" }}</p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="card-title">Recent Activity</h4>
+                        <!-- Display recent user activities or logs here -->
+                        <ul class="list-group">
+                            {% for activity in user.activities.all %}
+                            <li class="list-group-item">
+                                <p><strong>{{ activity.timestamp|date:"F j, Y, g:i a" }}</strong> - {{ activity.description }}</p>
+                            </li>
+                            {% empty %}
+                            <li class="list-group-item">No recent activities found.</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styles -->
+<style>
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card-header {
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    .card-footer {
+        border-top: 2px solid #dee2e6;
+    }
+
+    .list-group-item {
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .list-group-item:last-child {
+        border-bottom: none;
+    }
+
+    .btn {
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
